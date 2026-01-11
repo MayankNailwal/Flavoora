@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="Y6W-OH-hqX" customClass="LoginVC" customModule="Flavoora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITX-xu-WOm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-fW-E4m">
+                                        <rect key="frame" x="0.0" y="303" width="393" height="490"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="490" id="Yt8-JQ-t5i"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-NJ-Ac2">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="303"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2P7-DY-RMx">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Ab-9j-8sK">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gbe-yz-cap">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aUe-fW-E4m" secondAttribute="trailing" id="7xY-0b-bCQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="o9o-NJ-Ac2" secondAttribute="trailing" id="9Rc-Hp-YPC"/>
+                                    <constraint firstItem="o9o-NJ-Ac2" firstAttribute="top" secondItem="ITX-xu-WOm" secondAttribute="top" id="OGa-4f-fFE"/>
+                                    <constraint firstAttribute="bottom" secondItem="aUe-fW-E4m" secondAttribute="bottom" id="aJS-p5-9Ks"/>
+                                    <constraint firstItem="o9o-NJ-Ac2" firstAttribute="leading" secondItem="ITX-xu-WOm" secondAttribute="leading" id="byz-CG-jp9"/>
+                                    <constraint firstItem="aUe-fW-E4m" firstAttribute="top" secondItem="o9o-NJ-Ac2" secondAttribute="bottom" id="f52-iJ-uqA"/>
+                                    <constraint firstItem="aUe-fW-E4m" firstAttribute="leading" secondItem="ITX-xu-WOm" secondAttribute="leading" id="sKO-SJ-7xM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ITX-xu-WOm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Die-Pb-Fq9"/>
+                            <constraint firstItem="ITX-xu-WOm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="efz-eR-q8U"/>
+                            <constraint firstAttribute="bottom" secondItem="ITX-xu-WOm" secondAttribute="bottom" id="pvR-S9-Gzk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ITX-xu-WOm" secondAttribute="trailing" id="t4v-oM-SlT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carouselCollectionView" destination="o9o-NJ-Ac2" id="Hce-Aj-PKV"/>
+                        <outlet property="loginView" destination="aUe-fW-E4m" id="yHK-Rx-sHj"/>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="7Yy-9u-hPT"/>
+                        <outlet property="screenView" destination="ITX-xu-WOm" id="Ux8-qf-bJ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309.16030534351142" y="11.971830985915494"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
