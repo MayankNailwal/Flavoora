@@ -23,9 +23,33 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-fW-E4m">
                                         <rect key="frame" x="0.0" y="303" width="393" height="490"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWC-T2-Cle">
+                                                <rect key="frame" x="16" y="91" width="361" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="jmS-Vg-89j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwV-FZ-82D">
+                                                <rect key="frame" x="16" y="213" width="361" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Nia-Fj-JX1"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="arrowshape.right.fill" catalog="system"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
+                                            <constraint firstItem="BWC-T2-Cle" firstAttribute="top" secondItem="aUe-fW-E4m" secondAttribute="top" constant="91" id="BCp-YV-6Gi"/>
+                                            <constraint firstAttribute="trailing" secondItem="BWC-T2-Cle" secondAttribute="trailing" constant="16" id="NSp-tS-HMf"/>
+                                            <constraint firstAttribute="trailing" secondItem="XwV-FZ-82D" secondAttribute="trailing" constant="16" id="XfH-Ec-Zzw"/>
+                                            <constraint firstItem="BWC-T2-Cle" firstAttribute="leading" secondItem="aUe-fW-E4m" secondAttribute="leading" constant="16" id="YCv-s5-Zqg"/>
                                             <constraint firstAttribute="height" constant="490" id="Yt8-JQ-t5i"/>
+                                            <constraint firstItem="XwV-FZ-82D" firstAttribute="leading" secondItem="aUe-fW-E4m" secondAttribute="leading" constant="16" id="wTi-Of-aKH"/>
+                                            <constraint firstItem="XwV-FZ-82D" firstAttribute="top" secondItem="BWC-T2-Cle" secondAttribute="bottom" constant="82" id="yOO-Nc-wtD"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-NJ-Ac2">
@@ -72,8 +96,10 @@
                     </view>
                     <connections>
                         <outlet property="carouselCollectionView" destination="o9o-NJ-Ac2" id="Hce-Aj-PKV"/>
+                        <outlet property="emailTexfield" destination="BWC-T2-Cle" id="93L-rE-YR4"/>
                         <outlet property="loginView" destination="aUe-fW-E4m" id="yHK-Rx-sHj"/>
                         <outlet property="mainView" destination="5EZ-qb-Rvc" id="7Yy-9u-hPT"/>
+                        <outlet property="nextButton" destination="XwV-FZ-82D" id="j0K-xb-IJn"/>
                         <outlet property="screenView" destination="ITX-xu-WOm" id="Ux8-qf-bJ9"/>
                     </connections>
                 </viewController>
@@ -83,6 +109,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
